@@ -160,7 +160,7 @@ PlayerSettings:
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
-  AndroidPreferredInstallLocation: 1
+  AndroidPreferredInstallLocation: 0
   aotOptions: 
   stripEngineCode: 1
   iPhoneStrippingLevel: 0
@@ -606,7 +606,7 @@ PlayerSettings:
   webGLCompressionFormat: 1
   webGLLinkerTarget: 0
   scriptingDefineSymbols:
-    1: VRInteraction;Int_SteamVR
+    1: VRInteraction;Int_SteamVR;Int_Oculus
   platformArchitecture: {}
   scriptingBackend:
     Standalone: 0
