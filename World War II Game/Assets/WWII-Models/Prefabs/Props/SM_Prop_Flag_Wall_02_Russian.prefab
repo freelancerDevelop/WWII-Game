@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4667914617309964}
   - component: {fileID: 33544279672124482}
   - component: {fileID: 23777467515976190}
+  - component: {fileID: 64547457730630836}
   m_Layer: 0
   m_Name: SM_Prop_Flag_Wall_02_Russian
   m_TagString: Untagged
@@ -82,4 +83,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1471463349127446}
+  m_Mesh: {fileID: 4300000, guid: f7c7b6249258a9e43880f3ecc95e1ccb, type: 3}
+--- !u!64 &64547457730630836
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1471463349127446}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: f7c7b6249258a9e43880f3ecc95e1ccb, type: 3}

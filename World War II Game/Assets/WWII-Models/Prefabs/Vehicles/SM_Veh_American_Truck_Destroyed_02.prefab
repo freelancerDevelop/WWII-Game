@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4310099636001232}
   - component: {fileID: 33289892603853640}
   - component: {fileID: 23923858063989116}
+  - component: {fileID: 64727438123198900}
   m_Layer: 0
   m_Name: SM_Veh_American_Truck_Destroyed_02
   m_TagString: Untagged
@@ -50,9 +51,11 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: d7b1940334609964aae07781c726b83a, type: 2}
   m_StaticBatchInfo:
@@ -65,6 +68,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -79,4 +83,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1825347625900120}
+  m_Mesh: {fileID: 4300000, guid: cd2a94b0c39039349ab7d9880196f8a7, type: 3}
+--- !u!64 &64727438123198900
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1825347625900120}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: cd2a94b0c39039349ab7d9880196f8a7, type: 3}

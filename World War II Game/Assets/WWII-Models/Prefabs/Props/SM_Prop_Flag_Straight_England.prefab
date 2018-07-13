@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4392865748627444}
   - component: {fileID: 33405255770744866}
   - component: {fileID: 23145433336093888}
+  - component: {fileID: 64754420075039662}
   m_Layer: 0
   m_Name: SM_Prop_Flag_Straight_England
   m_TagString: Untagged
@@ -82,4 +83,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1595047678782014}
+  m_Mesh: {fileID: 4300000, guid: 08cd2b3ab86c6df4192b65a592ba9850, type: 3}
+--- !u!64 &64754420075039662
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1595047678782014}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 08cd2b3ab86c6df4192b65a592ba9850, type: 3}
