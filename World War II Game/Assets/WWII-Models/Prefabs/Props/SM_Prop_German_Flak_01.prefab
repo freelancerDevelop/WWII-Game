@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4226187238751334}
   - component: {fileID: 33272869003430176}
   - component: {fileID: 23842399598260500}
+  - component: {fileID: 64340157941119372}
   m_Layer: 0
   m_Name: SM_Prop_German_Flak_01
   m_TagString: Untagged
@@ -375,3 +376,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1577503810992424}
   m_Mesh: {fileID: 4300004, guid: 1eafc81685d57bc4fba5800c616b9e5f, type: 3}
+--- !u!64 &64340157941119372
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1135377015168842}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 1eafc81685d57bc4fba5800c616b9e5f, type: 3}

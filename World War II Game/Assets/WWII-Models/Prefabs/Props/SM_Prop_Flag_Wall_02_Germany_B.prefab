@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4606659718565310}
   - component: {fileID: 33417335408812904}
   - component: {fileID: 23215137962929242}
+  - component: {fileID: 64981570952516704}
   m_Layer: 0
   m_Name: SM_Prop_Flag_Wall_02_Germany_B
   m_TagString: Untagged
@@ -82,4 +83,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1386826753951906}
+  m_Mesh: {fileID: 4300000, guid: 223b2469d7335754fac7ff968836e0d8, type: 3}
+--- !u!64 &64981570952516704
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1386826753951906}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 223b2469d7335754fac7ff968836e0d8, type: 3}

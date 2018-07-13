@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4216053100792768}
   - component: {fileID: 33358432720334584}
   - component: {fileID: 23892973245565140}
+  - component: {fileID: 64323656695152986}
   m_Layer: 0
   m_Name: SM_Prop_Flag_Pole_Russian
   m_TagString: Untagged
@@ -82,4 +83,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1975754373443762}
+  m_Mesh: {fileID: 4300000, guid: f1d6b4cbea7ea234d83de433ba8c2a9d, type: 3}
+--- !u!64 &64323656695152986
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1975754373443762}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: f1d6b4cbea7ea234d83de433ba8c2a9d, type: 3}

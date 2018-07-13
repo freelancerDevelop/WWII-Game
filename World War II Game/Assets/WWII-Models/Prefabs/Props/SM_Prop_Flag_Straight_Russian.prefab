@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4148768396446710}
   - component: {fileID: 33074248775448612}
   - component: {fileID: 23343359424850656}
+  - component: {fileID: 64925214912318698}
   m_Layer: 0
   m_Name: SM_Prop_Flag_Straight_Russian
   m_TagString: Untagged
@@ -82,4 +83,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1231935378249394}
+  m_Mesh: {fileID: 4300000, guid: 45d66946f944a7543a78444bfbff1869, type: 3}
+--- !u!64 &64925214912318698
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1231935378249394}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 45d66946f944a7543a78444bfbff1869, type: 3}
