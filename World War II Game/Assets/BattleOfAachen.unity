@@ -399,22 +399,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1080347981839982, guid: f1f61d9d6df06484db083e981a0c772f, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1136326521049548, guid: f1f61d9d6df06484db083e981a0c772f, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1158843554634326, guid: f1f61d9d6df06484db083e981a0c772f, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1553679389097730, guid: f1f61d9d6df06484db083e981a0c772f, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1f61d9d6df06484db083e981a0c772f, type: 2}
   m_IsPrefabParent: 0
