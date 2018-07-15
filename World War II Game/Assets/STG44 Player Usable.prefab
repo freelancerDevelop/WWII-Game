@@ -547,7 +547,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1344649720397604}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -108.425, y: 63.352, z: -176.38354}
+  m_LocalPosition: {x: -89.086555, y: 66.084, z: -171.58963}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4363599452538938}
@@ -1184,10 +1184,10 @@ MonoBehaviour:
   pickupSound: {fileID: 0}
   dropSound: {fileID: 0}
   forceGrabSound: {fileID: 0}
-  hoverFoldout: 1
-  triggersFoldout: 1
+  hoverFoldout: 0
+  triggersFoldout: 0
   soundsFoldout: 0
-  ikFoldout: 1
+  ikFoldout: 0
   firingMode: 1
   shotMode: 2
   defaultPosition: {x: -0, y: 0, z: 0}
@@ -1235,7 +1235,7 @@ MonoBehaviour:
     attachmentReceiver: {fileID: 114197054184406826}
     startLoaded: 0
     isPrefab: 0
-  bulletDecalPrefab: {fileID: 1000013169864706, guid: e5a3d6da48298a0458c1990f58c27069,
+  bulletDecalPrefab: {fileID: 1614572127005044, guid: 4a049bbef79ee7845b541e2d0d83b4cc,
     type: 2}
   spawnOnFire:
   - {fileID: 1000011950633266, guid: fd16f026e93064f46abf313307e9ecff, type: 2}

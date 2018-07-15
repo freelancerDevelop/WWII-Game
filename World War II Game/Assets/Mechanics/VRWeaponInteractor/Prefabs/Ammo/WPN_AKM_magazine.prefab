@@ -177,6 +177,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 8ccc428f90a130b40a1bf606b324317e, type: 2}
   m_StaticBatchInfo:
@@ -331,13 +332,6 @@ MonoBehaviour:
   soundsFoldout: 0
   ikFoldout: 0
   attachmentRefs:
-  - localPosition: {x: 0, y: 0, z: 0}
-    localRotation: {x: 0, y: 0, z: 0, w: 1}
-    entryPosition: {x: 0, y: -0.046, z: -0}
-    gunHandlerAttachmentId: 5
-    receiverAttachmentId: 4
-    weaponPrefab: {fileID: 1000012951191072, guid: 9e558ec0f148deb47ab4409fcea5b153,
-      type: 2}
   - localPosition: {x: 0, y: 0, z: 0}
     localRotation: {x: 0, y: 0, z: 0, w: 1}
     entryPosition: {x: -0, y: -0.0525, z: -0}
