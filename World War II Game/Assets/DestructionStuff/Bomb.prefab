@@ -499,8 +499,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab_explosion: {fileID: 1549373087677006, guid: 2b79ec10654f26344816627d7515c1df,
     type: 2}
-  prefab_explosionSound: {fileID: 1431530912211830, guid: 585a1ef8c48a0cf4f97332139e4344de,
-    type: 2}
 --- !u!114 &114538225259572836
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -513,8 +511,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab_explosion: {fileID: 1549373087677006, guid: 2b79ec10654f26344816627d7515c1df,
-    type: 2}
-  prefab_explosionSound: {fileID: 1431530912211830, guid: 585a1ef8c48a0cf4f97332139e4344de,
     type: 2}
 --- !u!135 &135131991756290816
 SphereCollider:
