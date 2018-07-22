@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{16add442-d4cf-4116-bafa-221fc1fd9cac}">
+        <property name="assetPath">
+            <value>Battle gun shots distant loop_BLASTWAVEFX_31081.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>99.617097505668937</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{23c97ca6-06e3-4a61-9fc4-4621bb3edf5e}</destination>
+        </relationship>
+    </object>
+</objects>
