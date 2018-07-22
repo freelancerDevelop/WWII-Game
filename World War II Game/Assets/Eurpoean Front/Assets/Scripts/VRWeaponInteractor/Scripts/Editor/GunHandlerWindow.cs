@@ -1457,7 +1457,7 @@ namespace VRWeaponInteractor
 				returnPosition = new VRAttachment.AttachmentPosition();
 				returnPosition.gunHandlerAttachmentId = gunHandlerId;
 				returnPosition.receiverAttachmentId = receiverId;
-				Object gunHandlerPrefab = PrefabUtility.GetPrefabParent(((Transform)serializedGunHandler.FindProperty("item").objectReferenceValue).gameObject);
+				Object gunHandlerPrefab = PrefabUtility.GetCorrespondingObjectFromSource(((Transform)serializedGunHandler.FindProperty("item").objectReferenceValue).gameObject);
 				returnPosition.weaponPrefab = (GameObject)gunHandlerPrefab;
 				returnPosition.localPosition = Vector3.zero;
 				returnPosition.localRotation = Quaternion.identity;
