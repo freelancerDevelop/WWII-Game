@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 135131991756290816}
   - component: {fileID: 54323417660253674}
   - component: {fileID: 82178077402276822}
-  - component: {fileID: 114168996769873450}
+  - component: {fileID: 114252440726504192}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -300,7 +300,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 107.32
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -467,25 +467,6 @@ TrailRenderer:
     generateLightingData: 0
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
---- !u!114 &114168996769873450
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1116644725694488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e7c811ed50517b4fac6f25f6867bd0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeTilExplode: 20
-  explosion: {fileID: 1549373087677006, guid: 2b79ec10654f26344816627d7515c1df, type: 2}
-  warningRadius: 7
-  timeUntilWarningCanBeGiven: 1
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  runAwayBuffer: 3
 --- !u!114 &114239673744846458
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -499,6 +480,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab_explosion: {fileID: 1549373087677006, guid: 2b79ec10654f26344816627d7515c1df,
     type: 2}
+--- !u!114 &114252440726504192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1116644725694488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ea965855203d6540bd1ed90b976a0c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion_prefab: {fileID: 0}
+  minDamage: 0
+  maxDamage: 0
+  radiusOfDamage: 0
+  effectDeletionDelay: 0
+  destroyOnImpact: 1
+  clip: {fileID: 0}
+  craterPrefabs: []
 --- !u!114 &114538225259572836
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -532,7 +532,7 @@ SphereCollider:
   m_GameObject: {fileID: 1666142982046818}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
