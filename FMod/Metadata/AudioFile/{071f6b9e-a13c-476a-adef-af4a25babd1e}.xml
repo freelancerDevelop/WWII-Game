@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{071f6b9e-a13c-476a-adef-af4a25babd1e}">
+        <property name="assetPath">
+            <value>EFX INT of EXT Rain CENTER 02 B.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>96</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>106.58148958333334</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{23c97ca6-06e3-4a61-9fc4-4621bb3edf5e}</destination>
+        </relationship>
+    </object>
+</objects>
