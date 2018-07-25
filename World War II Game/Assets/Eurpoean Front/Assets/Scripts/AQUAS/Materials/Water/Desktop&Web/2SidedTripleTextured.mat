@@ -4,11 +4,11 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 2SidedTripleTextured
   m_Shader: {fileID: 4800000, guid: f625f9c13440d4e49bf26284e1c8c132, type: 3}
-  m_ShaderKeywords: _ENABLEREFLECTIONS_ON
+  m_ShaderKeywords: _ENABLECUSTOMFOG_ON _ENABLEREFLECTIONS_ON
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -81,30 +81,30 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _Density: 0.82
+    - _Density: 10
     - _DepthTransparency: 10
     - _DetailNormalMapScale: 1
     - _DistanceTilingFade: 1
-    - _Distortion: 0.15
+    - _Distortion: 0.67
     - _DstBlend: 0
-    - _EnableCustomFog: 0
+    - _EnableCustomFog: 1
     - _EnableReflections: 1
     - _Fade: 0.85
-    - _FoamBlend: 0.5
-    - _FoamContrast: 0.318
+    - _FoamBlend: 2
+    - _FoamContrast: 0.348
     - _FoamDistFade: 2.87
     - _FoamDistFalloff: 20.1
     - _FoamIntensity: 10
     - _FoamSpeed: -200
-    - _FoamTiling: 30
+    - _FoamTiling: 20
     - _FoamVisibility: 0.547
     - _FogDistance: 1000
     - _FogFade: 1.5
     - _FullTransparency: 0
     - _Gloss: 0.9
     - _Glossiness: 0.5
-    - _LargeWaveRefraction: 1.53
-    - _LargeWavesSpeed: 50
+    - _LargeWaveRefraction: 3
+    - _LargeWavesSpeed: -250
     - _LargeWavesTiling: 1
     - _LightWrapping: 2
     - _LongTilingDistance: 1500
@@ -121,7 +121,7 @@ Material:
     - _Refraction: 0.67
     - _RefractionDistance: 10
     - _RefractionFalloff: 1
-    - _ShoreFade: 0.56
+    - _ShoreFade: 0.256
     - _ShoreTransparency: 0.5
     - _SmallWaveRrefraction: 1.16
     - _SmallWavesSpeed: 60
@@ -141,6 +141,6 @@ Material:
     - _DeepWaterColor: {r: 0.01135381, g: 0.11889393, b: 0.1544118, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FoamColor: {r: 0.3823529, g: 0.3879758, b: 0.3879758, a: 1}
-    - _FogColor: {r: 0.8014706, g: 0.8014706, b: 0.8014706, a: 1}
+    - _FogColor: {r: 0.08254716, g: 0.32003355, b: 0.5, a: 1}
     - _MainColor: {r: 0, g: 1, b: 1, a: 1}
     - _SpecularColor: {r: 0.7205882, g: 0.7311851, b: 0.7311851, a: 1}
