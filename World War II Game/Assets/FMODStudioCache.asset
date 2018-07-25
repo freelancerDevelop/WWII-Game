@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 114387649923474238}
-  - {fileID: 114967749268026850}
+  - {fileID: 114332732822458514}
+  - {fileID: 114182520310249558}
   EditorEvents:
-  - {fileID: 114391949956918958}
-  - {fileID: 114088349063243686}
-  - {fileID: 114788488247465670}
-  MasterBankRef: {fileID: 114967749268026850}
-  StringsBankRef: {fileID: 114387649923474238}
-  stringsBankWriteTime: 636678684411931832
+  - {fileID: 114680758096084694}
+  - {fileID: 114768019723126178}
+  - {fileID: 114665297974997934}
+  MasterBankRef: {fileID: 114182520310249558}
+  StringsBankRef: {fileID: 114332732822458514}
+  stringsBankWriteTime: 636678933826171108
   cacheVersion: 2
 --- !u!114 &114088349063243686
 MonoBehaviour:
@@ -44,6 +44,42 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 99617
+--- !u!114 &114182520310249558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\tisda\Documents\GitHub\WWII-Game\FMod\Build\Desktop\Master Bank.bank
+  lastModified: 636678933826001561
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 4839488
+  Exists: 1
+--- !u!114 &114332732822458514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\tisda\Documents\GitHub\WWII-Game\FMod\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636678933826171108
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 828
+  Exists: 1
 --- !u!114 &114387649923474238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,6 +120,72 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 13000
+--- !u!114 &114665297974997934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/2D BG/Rain
+  guid: ee6eb4e199f2d846bc35ae3185e93929
+  Banks:
+  - {fileID: 114182520310249558}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 35466
+--- !u!114 &114680758096084694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/3D BG/Fire
+  guid: a1d63a11439a264f8139d91d2129d9ae
+  Banks:
+  - {fileID: 114182520310249558}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 14000
+--- !u!114 &114768019723126178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/2D BG/BattleGround
+  guid: e3518b98ef2e7d4486fa22c3e66344c7
+  Banks:
+  - {fileID: 114182520310249558}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 99617
 --- !u!114 &114788488247465670
 MonoBehaviour:
   m_ObjectHideFlags: 0
