@@ -13,9 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: C:\Users\XRAYH\Documents\GitHub\WWII-Game\FMod\WWII Fmod 1.fspro
-  SourceProjectPathUnformatted: ..\FMod\WWII Fmod 1.fspro
-  SourceBankPathUnformatted: ..\FMod\Build
+  sourceProjectPath: C:\Users\User\Documents\GitHub\WWII-Game\FMod\WWII Fmod 1.fspro
+  SourceProjectPathUnformatted: C:\Users\User\Documents\GitHub\WWII-Game\FMod\WWII
+    Fmod 1.fspro
+  SourceBankPathUnformatted: C:\Users\User\Documents\GitHub\WWII-Game\FMod\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
