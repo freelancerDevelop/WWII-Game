@@ -39,6 +39,8 @@ namespace xrayhunter.FPS
         private float headYaw;
         private float jumpSpeed;
 
+        private VehicleHandler vehicle;
+
         // Use this for initialization
         void Start()
         {
@@ -57,7 +59,7 @@ namespace xrayhunter.FPS
             // Looking around
             if (Input.GetButton("Free Look"))
             {
-                headPitch += Input.GetAxis("Mouse Y") * (aimSensitivity * 100) * Time.deltaTime;
+                headPitch -= Input.GetAxis("Mouse Y") * (aimSensitivity * 100) * Time.deltaTime;
                 headYaw += Input.GetAxis("Mouse X") * (aimSensitivity * 100) * Time.deltaTime;
 
                 headPitch = Mathf.Clamp(headPitch, headPitchLimitBottom - spinePitch, headPitchLimitTop - spinePitch);
@@ -70,7 +72,7 @@ namespace xrayhunter.FPS
                 headPitch = -spinePitch;
                 headYaw = spineYaw;
                 
-                spinePitch -= Input.GetAxis("Mouse Y") * (aimSensitivity * 100) * Time.deltaTime;
+                spinePitch += Input.GetAxis("Mouse Y") * (aimSensitivity * 100) * Time.deltaTime;
                 spineYaw += Input.GetAxis("Mouse X") * (aimSensitivity * 100) * Time.deltaTime;
 
                 spinePitch = Mathf.Clamp(spinePitch, bodyPitchLimitBottom, bodyPitchLimitTop);
@@ -90,45 +92,57 @@ namespace xrayhunter.FPS
             else
                 Cursor.lockState = CursorLockMode.None;
             
-
-            // Interaction
-            if (Input.GetButtonDown("Interaction"))
+            if (vehicle == null)
             {
-                RaycastHit hit;
-
-                if (Camera.allCameras[0] != null)
+                // Interaction
+                if (Input.GetButtonDown("Interaction"))
                 {
-                    if (Physics.Raycast(Camera.allCameras[0].ScreenPointToRay(Input.mousePosition), out hit, 100))
-                    {
+                    RaycastHit hit;
 
+                    if (Camera.allCameras[0] != null)
+                    {
+                        if (Physics.Raycast(Camera.allCameras[0].ScreenPointToRay(Input.mousePosition), out hit, 100))
+                        {
+
+                        }
                     }
                 }
-            }
-            // Movement
+                // Movement
 
-            float speed = walkSpeed;
+                float speed = walkSpeed;
 
-            if (Input.GetButton("Run"))
-            {
-                speed = runSpeed;
-            }
-
-            Vector3 velocity = transform.forward * Input.GetAxis("Vertical") * speed;
-            velocity += transform.right * Input.GetAxis("Horizontal") * speed;
-            
-            if (controller.isGrounded)
-            {
-                if (Input.GetButton("Jump"))
+                if (Input.GetButton("Run"))
                 {
-                    jumpSpeed = jumpForce;
+                    speed = runSpeed;
                 }
+
+                if (animator != null)
+                {
+                    animator.SetFloat("ForwardVelocity", Input.GetAxis("Vertical"));
+                    animator.SetFloat("StrafeVelocity", Input.GetAxis("Horizontal"));
+                    animator.SetBool("Aim", Input.GetMouseButton(1));
+                }
+                
+                Vector3 velocity = transform.forward * Input.GetAxis("Vertical") * speed;
+                velocity += transform.right * Input.GetAxis("Horizontal") * speed;
+
+                if (controller.isGrounded)
+                {
+                    if (Input.GetButton("Jump"))
+                    {
+                        jumpSpeed = jumpForce;
+                    }
+                }
+
+                jumpSpeed -= Mathf.Abs(gravity.y) * Time.deltaTime;
+                velocity.y = jumpSpeed;
+
+                controller.Move(velocity * Time.deltaTime);
             }
-
-            jumpSpeed -= Mathf.Abs(gravity.y) * Time.deltaTime;
-            velocity.y = jumpSpeed;
-
-            controller.Move(velocity * Time.deltaTime);
-            
+            else
+            {
+                // Do Vehicle controls...
+            }
         }
     }
 }
