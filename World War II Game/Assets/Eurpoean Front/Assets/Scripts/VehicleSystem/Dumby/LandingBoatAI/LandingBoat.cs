@@ -38,9 +38,13 @@ namespace xrayhunter.LandingCraft
 
         public Transform door;
 
+        public float doorOpenSpeed = 10.0f;
+
         private int waypointCounter = 0;
 
         private float speed = 0.0f;
+
+        private float angle = 0.0f;
 
         // Use this for initialization
         void Start()
@@ -71,25 +75,32 @@ namespace xrayhunter.LandingCraft
                     Quaternion rotation = Quaternion.LookRotation(waypoints[waypointCounter] - transform.position);
 
                     transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * rotationSpeed);
-                }
-                if (Vector3.Distance(this.transform.position, waypoints[waypointCounter]) <= 10)
-                {
-                    waypointCounter++;
+
+
+                    if (Vector3.Distance(this.transform.position, waypoints[waypointCounter]) <= 10)
+                    {
+                        waypointCounter++;
+                    }
                 }
                 else
                 {
-                    transform.Translate(Vector3.forward * Time.deltaTime);
-                }
-            }
-            else
-            {
-                if (door != null)
-                {
-                    //door.RotateAround(Vector3.zero, Vector3.up, )
+                    speed = Mathf.Lerp(speed, 0, Time.deltaTime);
                 }
 
-                if (destroyAtFinalWaypoint)
-                    DestroyImmediate(this.gameObject);
+                if (waypointCounter >= waypoints.Length)
+                {
+                    if (door != null)
+                    {
+                        door.eulerAngles = new Vector3(angle, door.eulerAngles.y, door.eulerAngles.z);
+                        angle += Time.deltaTime * doorOpenSpeed;
+                        angle = Mathf.Clamp(angle, -89, 89);
+                    }
+
+                    if (destroyAtFinalWaypoint)
+                        DestroyImmediate(this.gameObject);
+                }
+
+                transform.Translate(Vector3.forward * Time.deltaTime * speed);
             }
         }
 
