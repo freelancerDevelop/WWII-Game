@@ -1,0 +1,10 @@
+{
+    "name": "PropertyMaster",
+    "references": [
+        "com.unity.render-pipelines.core.Runtime"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}
