@@ -13,9 +13,15 @@ namespace xrayhunter.FPS
 
         public float aimSensitivity = 2.0f;
 
-        public Transform target;
+        public float bodyPitchLimitTop = 89;
+        public float bodyPitchLimitBottom = -89;
 
-        public Vector3 offset;
+        public float headPitchLimitTop = 89;
+        public float headPitchLimitBottom = -89;
+
+        public float headYawLimitTop = 89;
+        public float headYawLimitBottom = -89;
+
 
         [HideInInspector]
         public bool locked = true;
@@ -23,12 +29,14 @@ namespace xrayhunter.FPS
         private CharacterController controller;
         private Animator animator;
 
-        private Transform lowerBack;
-        private Transform neck;
-
+        private Transform head;
+        private Transform spine;
+        
         private Vector3 gravity = Physics.gravity;
-        private float pitch;
-        private float yaw;
+        private float spinePitch;
+        private float spineYaw;
+        private float headPitch;
+        private float headYaw;
         private float jumpSpeed;
 
         // Use this for initialization
@@ -39,31 +47,38 @@ namespace xrayhunter.FPS
 
             if (animator != null)
             {
-                lowerBack = animator.GetBoneTransform(HumanBodyBones.Chest);
-                neck = animator.GetBoneTransform(HumanBodyBones.Neck);
+                head = animator.GetBoneTransform(HumanBodyBones.Head);
+                spine = animator.GetBoneTransform(HumanBodyBones.Spine);
             }
         }
 
         private void LateUpdate()
         {
-
-
-            Vector3 rotation = new Vector3();
-            if (lowerBack != null)
+            // Looking around
+            if (Input.GetButton("Free Look"))
             {
-                if (Camera.allCameras[0] != null)
-                {
-                    lowerBack.transform.LookAt(target);
-                    lowerBack.rotation = lowerBack.rotation * Quaternion.Euler(offset);
+                headPitch += Input.GetAxis("Mouse Y") * (aimSensitivity * 100) * Time.deltaTime;
+                headYaw += Input.GetAxis("Mouse X") * (aimSensitivity * 100) * Time.deltaTime;
 
-                }
+                headPitch = Mathf.Clamp(headPitch, headPitchLimitBottom - spinePitch, headPitchLimitTop - spinePitch);
+                headYaw = Mathf.Clamp(headYaw, headYawLimitBottom + spineYaw, headYawLimitTop + spineYaw);
+
+                head.transform.eulerAngles = new Vector3(-headPitch, headYaw, 0);
             }
             else
             {
-                rotation = new Vector3(-pitch, yaw, 0);
-            }
+                headPitch = -spinePitch;
+                headYaw = spineYaw;
+                
+                spinePitch -= Input.GetAxis("Mouse Y") * (aimSensitivity * 100) * Time.deltaTime;
+                spineYaw += Input.GetAxis("Mouse X") * (aimSensitivity * 100) * Time.deltaTime;
 
-            transform.eulerAngles = rotation;
+                spinePitch = Mathf.Clamp(spinePitch, bodyPitchLimitBottom, bodyPitchLimitTop);
+
+                head.transform.eulerAngles = new Vector3(spinePitch, spine.transform.eulerAngles.y - 90, 0);
+                spine.transform.localRotation = Quaternion.Euler(-180, 0, spinePitch);
+                transform.eulerAngles = new Vector3(0, spineYaw, 0);
+            }
         }
 
         // Update is called once per frame
@@ -74,7 +89,7 @@ namespace xrayhunter.FPS
                 Cursor.lockState = CursorLockMode.Locked;
             else
                 Cursor.lockState = CursorLockMode.None;
-
+            
 
             // Interaction
             if (Input.GetButtonDown("Interaction"))
@@ -89,34 +104,6 @@ namespace xrayhunter.FPS
                     }
                 }
             }
-
-            // Aiming
-            pitch -= Input.GetAxis("Mouse Y") * aimSensitivity;
-            yaw += Input.GetAxis("Mouse X") * aimSensitivity;
-
-            //pitch = Mathf.Clamp(pitch, 25, 75);
-
-            /*if (Input.GetButton("Free Look"))
-            {
-                if (headBone != null)
-                {
-                    headBone.transform.eulerAngles = Vector3.Lerp(lowerBackBone.transform.eulerAngles, new Vector3(pitch, yaw, 0), Time.deltaTime * aimSensitivity);
-                }
-
-                if (lowerBackBone != null)
-                {
-                    lowerBackBone.transform.eulerAngles = Vector3.Lerp(lowerBackBone.transform.eulerAngles, new Vector3(pitch, 0, 0), Time.deltaTime * aimSensitivity);
-                }
-            }
-            else
-            {
-                if (headBone != null)
-                {
-                    headBone.transform.eulerAngles = new Vector3(0, 0, 0);
-                }
-
-            }*/
-
             // Movement
 
             float speed = walkSpeed;
@@ -126,25 +113,22 @@ namespace xrayhunter.FPS
                 speed = runSpeed;
             }
 
-            Vector3 velocity = Vector3.forward * Input.GetAxis("Vertical") * speed;
-            velocity += Vector3.right * Input.GetAxis("Horizontal") * speed;
-
-            if (Input.GetButton("Jump"))
+            Vector3 velocity = transform.forward * Input.GetAxis("Vertical") * speed;
+            velocity += transform.right * Input.GetAxis("Horizontal") * speed;
+            
+            if (controller.isGrounded)
             {
-                jumpSpeed = jumpForce;
+                if (Input.GetButton("Jump"))
+                {
+                    jumpSpeed = jumpForce;
+                }
             }
 
             jumpSpeed -= Mathf.Abs(gravity.y) * Time.deltaTime;
             velocity.y = jumpSpeed;
 
             controller.Move(velocity * Time.deltaTime);
-        }
-
-        private void OnDrawGizmosSelected()
-        {
-            Gizmos.color = Color.yellow;
-
-            Gizmos.DrawWireSphere(target.position, 0.1f);
+            
         }
     }
 }

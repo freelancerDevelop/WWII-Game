@@ -88,8 +88,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4621016545333706}
-  - component: {fileID: 114936575845022568}
   - component: {fileID: 65840368594850458}
+  - component: {fileID: 82941140999922556}
+  - component: {fileID: 114402302685518396}
   m_Layer: 0
   m_Name: Destructible Building Example
   m_TagString: Untagged
@@ -145,7 +146,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1974019516511610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -53.556915, y: 73.617386, z: -182.2607}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4463705048636290}
@@ -360,7 +361,102 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114936575845022568
+--- !u!82 &82941140999922556
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1974019516511610}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &114402302685518396
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -368,39 +464,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1974019516511610}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8e0129d261cfb243981154c4519be64, type: 3}
+  m_Script: {fileID: 11500000, guid: fdd18bcaa97cf0740bd066254090d80e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  structureStages:
-  - prefab: {fileID: 1418571016652894, guid: 80ac00a6b41e2f34b87dd10d8e2e2dd1, type: 2}
-    offset: {x: 0, y: 0, z: 0}
-    waitDestructionAnimation: 0.6
-    destruction_offset: {x: 0, y: -15, z: 0}
-    deleteWhenReachedOffset: 1
-    destruction_speed: 1.5
-    debreEffects_damaged: []
-    debreEffects_destruction: []
-    delayDeletion: 15
-    health: 100
-    damagedClips: []
-    destroyedClips:
-    - {fileID: 8300000, guid: 3c8f373fdb1467c4bbcea06cb8f62c12, type: 3}
-  - prefab: {fileID: 1390183093977470, guid: 3e1a8cd1d4498a641bb75f1a18792b7e, type: 2}
-    offset: {x: 0, y: 0, z: 0}
-    waitDestructionAnimation: 0
-    destruction_offset: {x: 0, y: 0, z: 0}
-    deleteWhenReachedOffset: 0
-    destruction_speed: 0
-    debreEffects_damaged: []
-    debreEffects_destruction:
-    - prefab: {fileID: 1119487697541066, guid: c11e16b12659d3d449670ce85f75f2e3, type: 2}
-      deletionDelay: 15
-      offset: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0}
-    delayDeletion: 0
-    health: 50
-    damagedClips: []
-    destroyedClips: []
+  structureStages: []
   destroyOnDeath: 0
   maxHealth: 100
-  health: 100
+  health: 0
