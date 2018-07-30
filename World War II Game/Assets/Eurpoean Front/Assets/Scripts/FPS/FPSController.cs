@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using xrayhunter.VehicleSystem;
+
 namespace xrayhunter.FPS
 {
     [RequireComponent(typeof(CharacterController), typeof(Animator))]
@@ -103,7 +105,10 @@ namespace xrayhunter.FPS
                     {
                         if (Physics.Raycast(Camera.allCameras[0].ScreenPointToRay(Input.mousePosition), out hit, 100))
                         {
-
+                            if (hit.transform.GetComponent<VehicleHandler>() != null)
+                            {
+                                vehicle = hit.transform.GetComponent<VehicleHandler>();
+                            }
                         }
                     }
                 }
@@ -141,7 +146,11 @@ namespace xrayhunter.FPS
             }
             else
             {
-                // Do Vehicle controls...
+                float motor = vehicle.maxMotorTorque * Input.GetAxis("Vertical");
+                float steering = vehicle.maxSteeringAngle * Input.GetAxis("Horizontal");
+
+                vehicle.SetMotor(motor);
+                vehicle.SetSteering(steering);
             }
         }
     }
