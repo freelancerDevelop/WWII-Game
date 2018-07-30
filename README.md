@@ -1,37 +1,21 @@
-## Welcome to GitHub Pages
+# Question Studios Presents EuropeanFront
 
-You can use the [editor on GitHub](https://github.com/QuestionStudios/WWII-Game/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+EuropeanFront is a VR and Non-VR game, where the player is interduced to the World War II battlefront. Question Studios presents this game to be a historic game than a traditional First-Person Shooter. We as a studio plan to make this game have a lot of realistic game features, even though we would lacking on the graphical side of the realism of the World War II game.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Plans
 
-### Markdown
+- Advanced Vehicle Systems
+- Advanced Weaponry Systems
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- VR Gameplay
+- Non-VR Gameplay
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/QuestionStudios/WWII-Game/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Developer Policies
+### Github Usuage Policies
+1. Before uploading, make sure, if you're adding to the game, you'll need to create a **_feature_** branch. That branches from the _development_ branch.
+2. Before merging, your _feature_ branch to the development, make sure your additions are overviewed by a leader of a department. Such as, if you're a programmer, you must check with your lead programmer or a senior programmer. Same applies to other departments.
+3. Before merging from the _development_ branch to the **master**, you must enter with permission by a lead or senior of your category to a release branch. This must be notified to all departments. 
+4. Before merging anything to the **master** branch, the additions must have gone through standard protocols on feature -> development -> release branches. 
+5. Before merging _release_ branch to the **master** branch, you must have permission by the **_CEO_** of Question Studios.
+### Workspace Policies
+1. [WIP]
