@@ -1,0 +1,96 @@
+You can also read the online manual in my website.
+http://chobi-glass.com/Physics_Tank_Maker_manual/index.html
+
+
+'How to Start' (Ver.3.0)
+Please feel free to contact me if you have any questions.
+shopmaster@chobi-glass.com
+http://chobi-glass.com/Unity/index.html
+
+
+
+*** How to Start ***
+(1) Create a new project, and import this package from Asset Store.
+Window >> AssetStore >> Import this package from the "Download Manager".
+
+
+(2) Set the "Build Settings".
+We need to set the "Build Settings" to play the demo scenes.
+Open the "Build Settings" window.
+File >> Build Settings...
+
+
+Find the demo scenes in the "Demo_Scenes" folder.
+
+
+Drag and drop all the scenes into the "Scenes In Build".
+
+
+
+(3) Change the "Color Space" to "Linear".
+The demo scenes were created in Linear color space, so their light settings are too bright in Gamma color space.
+Please change the color space in the "Player Settings".
+
+Edit >> Project Settings >> Player >> Change the "Color Space" value to "Linear" in the "Other Settings".
+
+
+
+(4) Play the demo scenes.
+You can find the demo scenes in the "Demo_Scenes" folder.
+I recomend you to first play the demo scene "01_Operation_Tutorial".
+
+
+
+*** How to update the "Project Settings" ***
+We need to update the "Project Settings" to use all the features in this project, such as the use of a gamepad.
+(1) Find a ZIP file named "ProjectSettings".
+You can find a Zip file named "ProjectSettings" in the "Read Me[Ver.3.0]" folder.
+
+
+
+(2) Open the directory of the ZIP file.
+You can open the directory of the ZIP file by clicking right mouse button on the file and choosing the "Show in Explorer"(Win) or "Show in Finder"(Mac).
+
+
+
+(3) Unzip the ZIP file, and copy the files in it.
+Unzip the ZIP file, and copy the three files "DynamicsManager", "InputManager" and "TagManager" in it.
+
+
+
+(4) Find the "ProjectSettings" folder in your project.
+You can open the directory of the "ProjectSettings" folder by clicking right mouse button on the "Assets" and choosing the "Show in Explorer"(Win) or "Show in Finder"(Mac).
+
+
+And find the "ProjectSettings" folder
+
+
+
+(5) Paste the three files in the "ProjectSettings" folder.
+Paste the three files in the "ProjectSettings" folder, and overwrite the old files.
+
+
+
+(6) Make sure the "ProjectSettings" has been updated.
+"Input Manager"
+
+
+"Tags & Layers"
+
+
+"Physics Manager"
+
+
+
+*** About to the Sky Boxes ***
+
+The Sky Boxes in the web demo are included in "Standard Assets for Unity 4.6". Please download and import it yourself.
+Unfortunately asset publishers are not allowed to include the "Standard Asset" in their asset packages.
+https://unity3d.com/asset-store/sell-assets/onboarding
+
+
+
+
+
+
+

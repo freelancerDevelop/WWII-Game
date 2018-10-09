@@ -1,0 +1,97 @@
+You can also read the online manual in my website.
+http://chobi-glass.com/Physics_Tank_Maker_manual/index.html
+
+'How to use AI Tank' (Ver.3.0)
+Please feel free to contact me if you have any questions.
+shopmaster@chobi-glass.com
+http://chobi-glass.com/Unity/index.html
+
+
+
+(Note.)
+The AI system requires "Navigation Mesh" (NavMesh) in the scene.
+When the NavMesh has not been baked for the scene, you will get errors in the runtime.
+
+*** How to use AI Tank***
+(1) Set the AI tank prefab in the scene.
+About how to set the tank prefab, please read 'How to use Tank Prefab'.
+
+(Note.)
+The AI system requires "AI_Headquaters_CS" script in the scene to choose the target.
+Usually the script is attached to the "Game_Controller" object in the scene.
+
+
+
+(2) Find the "AI_Settings_CS (Script)" in the top object.
+Find the "AI_Settings_CS (Script)" in the top object of the AI tank.
+We can change the behavior of the AI tank from this script.
+
+
+
+(3) Try to set the "Way Point Pack".
+"Way Point Pack" is an object that has several empty child objects as the waypoints.
+All the waypoints must be placed on the NavMesh, so that the AI can find the path to the waypoint.
+In the demo scenes, the "Way Point Pack" fitting for each scene is prepared.
+
+
+Drag and drop the "WayPoint Pack" in the scene into the "Way Point Pack" box in the script.
+
+
+The AI tank will drive passing through the way points in the runtime.
+(Note.)
+When the "Way Point Pack" is not set, the AI tank will stay in the initial position.
+
+
+(4) Try to set the "Follow Target".
+You can also make the AI tank follow the specified tank.
+Set the target tank in the scene, and drag and drop it into the "Follow Target" box in the script.
+
+
+The AI tank will follow the target tank when they have the same "Relationship" value.
+When their "Relationship" values are different, the AI tank will chase the target while attacking.
+
+
+(5) About the other options.
+You can change the AI settings more finely by adjusting the following values.
+
+"No Attack"
+The AI tank will never attack any target.
+
+"Breakthrough"
+Even when the AI tank detects the target, the AI tank will continue to patrol the waypoints without approaching the target.
+(Note.)
+This option is useful to make the AI tank break through the defense line.
+
+"Share Target"
+The AI tank will attack the same target as the specified tank set in the box.
+While the "Share Target" tank is not locking-on any target, the AI tank will find the target itself.
+
+"Visibility Radius"
+The AI tank can detect the target within this distance.
+
+"Approach Distance"
+The AI tank will approach the target to this distance.
+When the AI tank cannot aim the target by any obstacle, the AI tank will continue to approach the target even within this distance.
+(Note.)
+When this value is set to Infinity, the AI tank will never approach the target. This is useful to make the AI tank defend the position.
+
+"Open Fire Distance"
+The AI tank will open fire when the target is within this distance.
+
+"Lost Count"
+The AI tank will completely lose the target when this time period passes after the target gets out of sight.
+
+"Face the Target"
+The AI tank will turn toward the target while attacking.
+(Note.)
+Enable this option when the turret rotation is limited in narrow angle range such as "Moser Karl".
+Also this option is useful to make the AI tank cover its weak points.
+
+"Text for AI's state"
+The state of the AI tank can be displayed in real time on this Text.
+
+"Tank Name"
+The name displayed on the "Text for AI's state".
+When this option is empty, the name of the top object of the AI tank is displayed.
+
+

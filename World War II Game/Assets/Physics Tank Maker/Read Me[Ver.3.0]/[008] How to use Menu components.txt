@@ -1,0 +1,86 @@
+You can also read the online manual in my website.
+http://chobi-glass.com/Physics_Tank_Maker_manual/index.html
+
+
+'How to use Menu components' (Ver.3.0)
+Please feel free to contact me if you have any questions.
+shopmaster@chobi-glass.com
+http://chobi-glass.com/Unity/index.html
+
+
+
+*** Outline ***
+The demo scene opened before the battle scene is called "Menu Scene" in this project.
+
+
+In the menu scene, there are several objects used only for menu scenes.
+
+
+
+
+*** How to use Menu components ***
+"Menu_Camera"
+This object is used as the main camera in the menu scene.
+You can adjust the position and the rotation as you will.
+The initial viewport size can be changed by adjusting "Size" value in the "Camera" component.
+
+
+The rotation and the zooming functions are controlled by "Menu_Camera_CS" script in it.
+
+
+"Menu_Dictionary"
+This object is used for sending the list of chosen tanks in the dropdowns and the list of values in the sliders to the battle scene.
+The lists are created and sent by "Menu_Dictionary_CS" script in it.
+
+Please input the name of the ballte scene opened from this menu scene into the "Battle Scene Name".
+(Note.)
+If the "Battle Scene Name" is wrong, the values of the lists will not be reflected in the battle scene.
+
+
+"Canvas_Briefing"
+The Text object used for displaying the briefing of the mission is placed under this Canvas.
+The scrolling function is controlled by "Menu_Briefing_CS" script in the Text object.
+
+
+
+"Canvas_Button"
+The Buttons used for opening other scene are placed under this Canvas.
+Please input the name of the scene opened by this Button into the "Scene Name".
+
+
+(Note.)
+You need to add the scene into the "Scenes In Build" in the "Build Settings" to open the scene via Buttons.
+
+
+
+"EventSystem"
+This object is required to use GUI components such as Button and Dropdown in the scene.
+
+
+"Canvas_Slider"
+The Sliders used for adjusting the "Attack_Multiplier" and "Defence Multiplier" of the player's tank are placed under this Canvas.
+You can change their initial values in the "Menu_Slider_CS" script in them.
+
+
+(Note.)
+This script corresponds to the 'Spawn Tank' event with the same "Key Name" in the battle scene.
+About the 'Spawn Tank' event, please read 'How to use "Event_Controller"'.
+
+
+"Canvas_Dropdown"
+The Dropdowns used for selecting each tank are placed under this Canvas.
+You can change their values in the "Menu_Dropdown_CS" script in them.
+
+
+(Note.)
+This script corresponds to the 'Spawn Tank' event with the same "Key Name" in the battle scene.
+About the 'Spawn Tank' event, please read 'How to use "Event_Controller"'.
+
+
+"Symbols"
+The symbol objects for the tanks in the scene are placed under this object.
+Move, rotate, scale, duplicate and remove them fitting for the battle scene.
+
+
+
+

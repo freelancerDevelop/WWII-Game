@@ -1,0 +1,233 @@
+You can also read the online manual in my website.
+http://chobi-glass.com/Physics_Tank_Maker_manual/index.html
+
+
+'How to use "Event_Controller"' (Ver.3.0)
+Please feel free to contact me if you have any questions.
+shopmaster@chobi-glass.com
+http://chobi-glass.com/Unity/index.html
+
+
+
+*** Outline ***
+In the demo scenes, all the tanks are spawned in the runtime by "Event_Controller_CS" script in each object.
+Also the messages, the reinforcements and the artillery fire in the scenes are controlled by this script.
+
+
+The event script has three kinds of Triggers.
+
+"Timer"
+When the specified time passes, the event is executed.
+
+"Destroy"
+When the specified tank(s) is destroyed, the event is executed.
+
+"Trigger Collider"
+When the specified tank(s) touches the specified "Trigger_Collider(s)", the event is executed.
+"Trigger_Collider" is a special object used for detecting the contact of a tank, and sending the information of the detected tank to the event scripts.
+You can find this object as a long thin translucent box in the demo scenes.
+
+
+And the event script is able to generate six kinds of Events.
+
+"Spawn Tank"
+Spawn the tank with specified settings.
+
+"Show Message"
+Show message in the specified Text object.
+
+"Change AI settings"
+Change the settings of the specified AI tank(s).
+
+"Remove Tank"
+Remove the specified tank(s) from the scene.
+
+"Artillery Fire"
+Bombard the specified target.
+This event requires "Artillery" object in the scene.
+"Artillery" object has "Artillery_Fire_CS" script in it, and we can adjust the settings such as the attack points and the explosion force from the script.
+
+You can find the prefab in the "Scene_Components" folder under the "Prefabs" folder.
+
+"Destroy Tank"
+Destroy the specified tank.
+Also the event script is able to remove or enable other event scripts with the event.
+
+
+
+*** How to set the Triggers ***
+At first, choose the "Trigger Type", and set the following settings.
+
+
+(Note.)
+The triggers are sleeping while the event script is disabled, and they awake when the event script is enabled.
+In the demo scenes, some of the event scripts are disabled from the beginning, and they are enabled by other event scripts in the runtime.
+
+
+"Timer"
+
+"Trigger Time"
+When this time period passes, the event is executed.
+
+"Destroy"
+
+"Number of Trigger Tanks"
+Set the number of trigger tanks.
+
+"Trigger Tank"
+Drag and drop the tank should be destroyed from the Hierarchy window to the box.
+
+"Operator Type"
+"AND" >> The event is executed when the following conditions are satisfied.
+"OR" >> The event is executed when one of the triggers is pulled.
+
+"Require All the Triggers"
+All the triggers must be pulled to execute the event.
+
+"Number of Necessary Triggers"
+Set the number of triggers must be pulled to execute the event.
+
+"Trigger Collider"
+
+"Number of Trigger Colliders"
+Set the number of "Trigger_Colliders".
+
+"Trigger Collider"
+Drag and drop the "Trigger_Collider" should be touched from the Hierarchy window to the box.
+
+"Trigger Setting Type"
+"Set Manually" >> You can set the trigger tank(s) manually.
+"Any Hostile Tank" >> The "Trigger_Collider(s)" detects any hostile tank as the trigger tank.
+"Any Friendly Tank" >> The "Trigger_Collider(s)" detects any friendly tank as the trigger tank.
+"Any Tank" >> The "Trigger_Collider(s)" detects any tank as the trigger tank.
+
+"Operator Type"
+"AND" >> The event is executed when the following conditions are satisfied.
+"OR" >> The event is executed when one of the triggers is pulled.
+
+"Require All the Triggers"
+All the triggers must be pulled to execute the event.
+
+"Number of Necessary Triggers"
+Set the number of triggers must be pulled to execute the event.
+
+
+
+*** How to set the Events ***
+At first, choose the "Event Type", and set the following settings.
+
+
+"Spawn Tank"
+
+"Tank Prefab"
+Set the tank prefab to be spawned.
+
+"Key Name"
+Set the "Key Name" corresponding to the Dropdown in the menu scene.
+About the menu scene, please read 'How to use Menu components'.
+
+"Tank ID"
+Choose the ID number differing from other tanks.
+(Note.)
+At least one of the tanks in the scene must be set to "1".
+
+"Relationship"
+Choose the relationship with other tanks.
+
+"Remove After Death"
+The tank is removed from the scene when the specified time passes after being destroyed.
+This option can be set only when the "Tank ID" is set to "Not Operable".
+
+"Attack Multilplier"
+The "Attack Points" of the bullet are multiplied by this value.
+This option is useful to adjust the difficluty of the battle scene.
+
+"Defence Multilplier"
+The "Hit Points" of the tank are multiplied by this value.
+This option is useful to adjust the difficluty of the battle scene.
+(Note.)
+The hit points for the tracks are never multiplied .
+*** AI settings ***
+The AI settings are displayed only when the "Tank Prefab" has AI components.
+About the AI settings, please read 'How to use AI Tank'.
+
+"Show Message"
+
+"Text"
+Set the Text object to display the message, and input the message to the box as you will.
+
+"Color"
+The message is displayed in this color.
+
+"Displaying Time"
+The message is displayed for this time.
+
+"Change AI Settings"
+
+"Target is trigger itself"
+This option is displayed only when the "Trigger Type" is set to "Trigger Collider", and the "Operator Type" is set to "OR".
+The trigger tank that touches the "Trigger_Collider" is set as the target tank to change the AI settings.
+
+"Wait for all the triggers"
+This option is displayed only when the "Target is trigger itself" is enabled.
+This event will wait for all the trigger tanks to touch the "Trigger_Collider".
+
+"Number of Target Tanks"
+This option is displayed only when the "Target is trigger itself" is disabled or not displayed.
+Set the number of target tanks to change the AI settings.
+
+"Target Tank"
+Set the target tank to change the AI settings.
+
+"Remove Tank"
+
+"Number of Target Tanks"
+Set the number of target tanks to remove.
+
+"Target Tank"
+Set the target tank to remove.
+
+"Artillery Fire"
+
+"Artillery Object"
+Set the "Artillery" object in the scene..
+
+"Target"
+Set the target to fire.
+
+"Number of Shells"
+Set the number of shells to be fired.
+
+"Destroy Tank"
+
+"Target is trigger itself"
+This option is displayed only when the "Trigger Type" is set to "Trigger Collider", and the "Operator Type" is set to "OR".
+The trigger tank that touches the "Trigger_Collider" is set as the target tank to destroy.
+
+"Wait for all the triggers"
+This option is displayed only when the "Target is trigger itself" is enabled.
+This event will wait for all the trigger tanks to touch the "Trigger_Collider".
+
+"Number of Target Tanks"
+This option is displayed only when the "Target is trigger itself" is disabled or not displayed.
+Set the number of target tanks to destroy.
+
+"Target Tank"
+Set the target tank to destroy.
+
+"Other Event Settings"
+The event script is able to remove or enable other event scripts with the event.
+
+"Number of Events to be Removed"
+Set the number of the events should be removed from the scene.
+
+"Event to be Removed"
+Set the event should be removed from the scene.
+
+"Number of Events to be Enabled"
+Set the number of the events should be enabled.
+
+"Event to be Enabled"
+Set the event should be enabled.
+
+

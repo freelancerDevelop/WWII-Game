@@ -1,0 +1,35 @@
+You can also read the online manual in my website.
+http://chobi-glass.com/Physics_Tank_Maker_manual/index.html
+
+
+'How to save a new Tank Prefab' (Ver.3.0)
+Please feel free to contact me if you have any questions.
+shopmaster@chobi-glass.com
+http://chobi-glass.com/Unity/index.html
+
+
+
+*** How to save a new Tank Prefab ***
+This tutorial shows how to save a new tank prefab after remodeling.
+
+(1) Drag and drop the tank object into any folder.
+This is a normal manner to save a new prefab.
+
+
+
+(2) Select the tank object again, and press "Apply" button.
+This step is very important in this project.
+The new prefab has the old reference yet in the "Respawn_Controller_CS (Script)", so we need to update the reference.
+Select the tank object in the Hierarchy window again, and press the "Apply" button in the Inspector window.
+
+
+
+(3) Test the new prefab by respawning.
+Increase the "Respawn Times" value in the "Respawn_Controller_CS (Script)" in the top object.
+And respawn the tank by pressing Enter (Return) key in the runtime.
+
+
+Make sure that the respawned tank has new settings in the new prefab.
+
+
+

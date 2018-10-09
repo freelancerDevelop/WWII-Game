@@ -1,0 +1,285 @@
+You can also read the online manual in my website.
+http://chobi-glass.com/Physics_Tank_Maker_manual/index.html
+
+
+'How to Operate' (Ver.3.0)
+Please feel free to contact me if you have any questions.
+shopmaster@chobi-glass.com
+http://chobi-glass.com/Unity/index.html
+
+
+
+(Tips.)
+You can learn the operation while playing the demo scene "01_Operation_Tutorial".
+
+*** How to change the operation type ***
+(Note.)
+When the scene is opened via the demo scene "00_Scene_Selector", the following settings will be overwritten by "Option_Manager" placed in the "00_Scene_Selector".
+
+(1) Select "Game_Controller" in the scene.
+
+
+
+(2) Choose the "Input Type" in the Inspector window.
+Find the "Input_Type_Manager_CS (Script)" in the Inspector window, and choose the "Input Type" in it.
+
+
+
+
+*** Common Functions ***
+Switch Tank >> "Num + / Num - / Num Enter"
+
+Restart >> "Back Space"
+
+Respawn >> "Enter(Return)"
+
+Pause >> "P"
+
+Switch Cursor >>"Left Shift"
+
+
+*** Mouse + KeyBoard (Stepwise / Pressing) ***
+Camera Rotaion >> "Move mouse"
+
+Camera Zoom >> "Mouse Wheel"
+
+Speed >> "W / S / (X)"
+
+Turn >> "A / D"
+
+Lock-On >> "Right Button"
+
+Aiming >> "Move mouse while pressing Space"
+
+Fire >> "Left Button"
+
+Switch Target >> "Q / E"
+
+Lock-Off >> "Middle Button"
+
+Free Aiming >> "R"
+
+Switch Bullet >> "V"
+
+Switch Camera >> "F"
+
+
+*** Mouse + KeyBoard (Legacy) ***
+Camera Rotaion >> "Right Drag"
+
+Camera Zoom >> "Mouse Wheel"
+
+Speed >> "W / S / X"
+
+Turn >> "A / D"
+
+Lock-On >> "Middle Button on the target"
+
+Aiming >> "Move mouse while pressing Space"
+
+Fire >> "Left Button"
+
+Switch Target >> "Q / E"
+
+Lock-Off >> "Middle Button on your tank"
+
+Free Aiming >> "R"
+
+Switch Bullet >> "V"
+
+Switch Camera >> "F"
+
+
+*** GamePad (Single Stick) ***
+Camera Rotaion >> "Right Stick"
+
+Camera Zoom >> "Left / Right Triggers"
+
+Move >> "Left Stick"
+
+Lock-On >> "Y Button"
+
+Aiming >> "Right Stick while pressing Left Bumper"
+
+Fire >> "Right Bumper"
+
+Switch Target >> "X / B Buttons"
+
+Lock-Off >> "A Button"
+
+Free Aiming >> "Press Left Stick"
+
+Switch Bullet >> "Back"
+
+Switch Camera >> "F"
+
+
+*** GamePad (Twin Sticks) ***
+Camera Rotaion >> "Left Stick (Horizontal) / Right Stick (Vertical)"
+
+Camera Zoom >> "Left / Right Triggers"
+
+Move >> "Left Stick (Vertical) / Right Stick (Horizontal)"
+
+Turret >> "Right Stick while pressing Left Bumper"
+
+Fire >> "Right Bumper"
+
+Look Forward >> "A Button"
+
+Gun Camera >> "Press Left Stick"
+
+Switch Bullet >> "Back"
+
+Switch Camera >> "F"
+
+
+*** GamePad (Triggers) ***
+Camera Rotaion >> "Right Stick"
+
+Camera Zoom >> "Y Button / B Button"
+
+Move >> "Triggers / Bumpers"
+
+Turret >> "Left Stick"
+
+Fire >> "X Button"
+
+Look Forward >> "A Button"
+
+Gun Camera >> "Press Left Stick"
+
+Switch Bullet >> "Back"
+
+Switch Camera >> "F"
+
+
+
+[ Drive ]
+    "Arrow keys"
+
+[ Turret and Cannon ]
+    "Z" + "Arrow keys"
+
+[ Camera Rotation ]
+    "W A S D"
+
+[ Camera Zoom ]
+    "Q" / "E"
+
+[ Fire ]
+    "X"
+    
+[ Gun Camera ]
+    "R" (Small / Full / Off)
+    "F" + "Arrow Up/Down" (Adjust Vertical)
+    "F" + "Arrow Left/Right" (Zoom)
+
+
+[ GamePad ( Stick operation ) ]
+[ Drive ]
+    "Left Stick"
+
+[ Turret and Cannon ]
+    "L Button" + "Right Stick"
+
+[ Camera Rotation ]
+    "Right Stick"
+
+[ Camera Zoom ]
+    "X Button" / "A Button"
+
+[ Fire ]
+    "R Button"
+
+[ Gun Camera ]
+    "B Button" (Small / Full / Off)
+    "Y Button" + "Left Stick Up/Down" (Adjust Vertical)
+    "Y Button" + "Left Stick Left/Right" (Zoom)
+
+
+[ GamePad ( Trigger operation ) ]
+[ Drive ]
+    "Left Trigger", "Right Trigger" (Forward)
+    "R Button", "L Button" (Backward)
+
+[ Turret and Cannon ]
+    "Left Stick"
+
+[ Camera Rotation ]
+    "Right Stick"
+
+[ Camera Zoom ]
+    "A Button" + "Left Stick Up/Down"
+
+[ Fire ]
+    "X Button"
+
+[ Gun Camera ]
+    "B Button" (Small / Full / Off)
+    "Y Button" + "Left Stick Up/Down" (Adjust Vertical)
+    "Y Button" + "Left Stick Left/Right" (Zoom) 
+
+
+[ GamePad ( Stick + Trigger operation ) ]
+[ Drive ]
+    "Right Trigger" (forward)
+    "Left Trigger" (backward)
+    "Left Stick" (Steering)
+
+[ Turret and Cannon ]
+    "L Button" + "Right Stick"
+
+[ Camera Rotation ]
+    "Right Stick"
+
+[ Camera Zoom ]
+    "X Button" / "A Button"
+
+[ Fire ]
+    "R Button"
+
+[ Gun Camera ]
+    "B Button" (Small / Full / Off)
+    "Y Button" + "Left Stick Up/Down" (Adjust Vertical)
+    "Y Button" + "Left Stick Left/Right" (Zoom)
+
+
+[ Semi Automatic]
+[ Move ]
+    "Left Mouse Button" on the destination point.
+
+[ Move Backward]
+    "Right Mouse Button" + "Left Mouse Button" on the destination point.
+
+[ Speed Control ]
+    "Mouse Wheel"
+
+[ Camera Rotation ]
+    "Right Mouse Drag"
+
+[ Camera Zoom ]
+    "Right Mouse Button" + "Mouse Wheel"
+
+[ Lock-On ]
+    "Middle Mouse Button" on the target.
+
+[ Release Lock-On ]
+    "Middle Mouse Button" on your tank.
+
+[ Free Aiming ]
+    "Left Shift"
+
+[ Fire ]
+    "Left Mouse Button" on your tank or the gun-camera window.
+
+[ Adjust Aiming ]
+    "Space" + Mouse Moving
+
+[ Gun Camera ]
+    "R" (Small / Full / Off)
+    "Mouse Wheel" (Zoom)
+    "F" + "Mouse Wheel" (Adjust Vertical)
+
+
+

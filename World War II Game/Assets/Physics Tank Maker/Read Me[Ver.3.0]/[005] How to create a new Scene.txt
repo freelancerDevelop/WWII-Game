@@ -1,0 +1,70 @@
+You can also read the online manual in my website.
+http://chobi-glass.com/Physics_Tank_Maker_manual/index.html
+
+
+'How to create a new Scene' (Ver.3.0)
+Please feel free to contact me if you have any questions.
+shopmaster@chobi-glass.com
+http://chobi-glass.com/Unity/index.html
+
+
+
+*** How to create a new Scene ***
+(1) Set the required components in the scene.
+In this project, the minimum required components for the new scene are as follows.
+
+Ground object
+The tank in this project requires any collider in the ground.
+
+Navigation Mesh (Nav Mesh)
+When you use the AI tank in this project, you need to bake the Nav Mesh for the ground.
+
+"Game_Controller" object.
+When you need the following functions, set the "Game_Controller" object in the scene.
+You can find the prefab in the "Scene_Components" folder under the "Prefabs" folder.
+The "Game_Controller" has the following scripts and the functions.
+
+"Game_Controller_CS (Script)"
+This script has some general functions such as Quit, Pause and switching the cursor state.
+
+"ID_Manager_CS (Script)"
+This script gives a proper ID number to each tank in the scene.
+Also the player can switch the tank in the runtime by this script.
+
+"Input_Type_Manager_CS (Script)"
+You can change the operation type of all the tanks in the scene from this script.
+Also this script shows or hides the cursor according to the operation type at the opening of the scene.
+
+"AI_Headquaters_CS (Script)"
+This script chooses the target of each AI tank in the scene, and gives the target information to each AI tank.
+AI tanks never attack any tank without this script.
+
+
+
+(2) Set the optional components in the scene.
+The following components are not necessarily essential.
+However put them into the scene except when you will modify this project.
+You can find the prefabs of them in the "Scene_Components" folder under the "Prefabs" folder.
+
+"Canvas_Reticle"
+This object has some images used as a reticle screen of the tank gun displayed while aiming.
+
+"Canvas_Markers"
+This object contains images for "Position Marker", "Aiming Marker" and "Reloading Circle".
+
+"Canvas_States"
+This object has several Text objects used for displaying the state of AI tanks in the scene.
+
+"Canvas_Message"
+This object contains some Text objects for displaying the message from the events.
+About the event, please read How to use "Event Controller".
+
+"Canvas_HP_Bars (Self)"
+This object is used for displaying the hit points of the current selected tank.
+You can see the blue bars at the lower left of the screen in the demo scenes.
+
+"Canvas_HP_Bars (Target)"
+This object is used for displaying the hit points of the target tank.
+You can see the red bars while locking on the enemy tank in the demo scenes.
+
+

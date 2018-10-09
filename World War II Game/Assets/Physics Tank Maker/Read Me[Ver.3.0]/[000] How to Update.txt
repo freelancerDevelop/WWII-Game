@@ -1,0 +1,133 @@
+You can also read the online manual in my website.
+http://chobi-glass.com/Physics_Tank_Maker_manual/index.html
+
+
+'How to Update (2.5 >> 3.0)'
+Please feel free to contact me if you have any questions.
+shopmaster@chobi-glass.com
+http://chobi-glass.com/Unity/index.html
+
+
+(Note.)
+Please backup your project before importing the new version, because most of the scripts, prefabs and scenes will be overwritten. 
+
+*** Outline ***
+The main changes from the previous versions are as follows.
+
+Damage system
+The system has been changed into Hit-Points system. Please read 'How to change Hit Points'.
+The bullet has Attack-Points to receive the damage value. Please read 'How to change Attack Power'.
+The "Armor_Collider" has a multiplier value instead of the durability value. Please read 'How to use "Armor_Collider"'.
+
+Camera functions
+The functions for the main camera have been created anew.Please read 'How to change Camera settings'.
+Also the several scritps have been divided into some scripts by function. Please ask me if you need any help about how to modify them.
+shopmaster@chobi-glass.com
+
+
+
+
+
+*** How to update the project settings (2.5 >> 3.0) ***
+In the version 3.0, the "Input Manger" has been changed to use all the sticks and the buttons of a gamepad.
+Please update it referring to 'How to Start'.
+
+
+
+
+
+*** How to update the old tank (2.5 >> 3.0) ***
+(1) Add new scripts.
+Select the top object of the tank, and set the "'Camera_Pivot' Prefab" in the "Tank_ID_Control_CS (Script)".
+
+You can find the "Camera_Pivot" prefab in the "Tank_Components" folder under the "Prefabs" folder. Drag and drop it into the box.
+
+And press the "Add New Scripts" button.
+
+
+(2) Remove the "Tank_ID_Control_CS (Script)".
+The "Tank_ID_Control_CS (Script)" is no longer required. Please remove it from the top object.
+
+
+(3) Update the MainBody.
+Select the "MainBody" of the tank, and press the "Update Values" button in the "MainBody_Settings_CS (Script)".
+
+
+(4) Update the wheels.
+Press the "Update Values" button in all the "Create_RoadWheel", "Create_IdlerWheel", "Create_SprocketWheel" and "Create_SupportWheel".
+
+
+(5) Update the tracks.
+"Physics_Track"
+Press the "Update Values" button in the "Create_TrackBelt_CS (Script)".
+(Note.)
+If the materials have been lost, please set them again.
+
+"Static_Track"
+Press the "Update Track Pieces" button in the "Static_Track_Parent_CS (Script)".
+
+
+Also update the "Track_Collider" objects by pressing the "Find the closest piece" button in it.
+
+
+"Scroll_Track"
+Press the "Find Road Wheel [ Left (Right) ]" button in the "Track_Scroll_CS (Script)" according to the direction.
+
+
+
+(6) Update the turret objects.
+Press the "Update Values" button in the "Turret_Base", "Cannon_Base" and "Barrel_Base".
+
+
+(7) Update the "Engine_Sound".
+Press the "Set Automatically" button in it.
+
+
+
+(8) Update the "Dust" objects.
+Press the "Set Automatically" button in it.
+
+
+
+(9) Set the Hit-Points values.
+Set the Hit-Points values of the tank referring to 'How to change Hit Points'.
+
+
+(10) Set the Attack-Points values.
+Set the Attack-Points values of the bullet referring to 'How to change Attack Power'.
+
+
+(11) Update the "Armor_Collider".
+Update the "Armor_Collider(s)" referring to 'How to use "Armor_Collider"'.
+
+
+(12) Save the tank.
+Save the new tank by overwriting the prefab, or creating a new prefab referring to 'How to save a new Tank Prefab'.
+
+
+
+
+
+*** How to update the old battle scene (2.5 >> 3.0) ***
+(1) Add Hit-Points bars.
+You can find "Canvas_HP_Bars (Self)" and "Canvas_HP_Bars (Target)" prefabs in the "Scene_Components" folder under the "Prefabs" folder.
+Drag and drop them into the Hierarchy window.
+
+
+(2) Update the "Game_Controller".
+If the "Game_Controller" in the scene has lost the connection with the prefab (displayed in black), press the "Revert" button in the Inspector window to update it.
+
+
+
+
+
+
+*** How to update the old Menu scene (2.5 >> 3.0) ***
+Input the name of the battle scene opened from this menu scene into the "Battle Scene Name" in the "Menu_Dictionary".
+
+(Note.)
+If this value is empty, the changes in the menu scene will never be reflected in the battle scene.
+
+
+
+

@@ -1,0 +1,58 @@
+You can also read the online manual in my website.
+http://chobi-glass.com/Physics_Tank_Maker_manual/index.html
+
+
+'How to use Tank Prefab' (Ver.3.0)
+Please feel free to contact me if you have any questions.
+shopmaster@chobi-glass.com
+http://chobi-glass.com/Unity/index.html
+
+
+
+*** How to use Tank Prefab ***
+(1) Find the tank prefabs.
+The tank prefabs are placed under the "Prefab_Tanks" folder.
+
+There are several types of tanks in the folder.
+
+"###_ST"
+The tanks named as "###_ST" are optimized for being used in the battle scenes as the player's tank.
+
+"###_AI"
+The tanks in the "AI" folder have AI components, and are optimized for being used in the battle scenes as a NPC tank.
+
+"###_AI_ScrollTrack" 
+The tanks in the "AI_ScrollTrack" folder also have AI components, and are more optimized for the battle scenes by simplifying the tracks.
+
+"###_PT"
+The tanks in the "PhysicsTrack" folder have realistic tracks simulated by the physics engine, but are not suitable for the battle scenes because of the performance.
+Usually they are used for creating a new tank with "Static_Track" as the base.
+
+"###_HQ"
+The tanks in the "HQ" folder have realistic tracks created for experimental purposes.
+You can try them in the demo scene "HighQualityPhysics_Scene".
+
+(2) Drag and drop the prefab into the Hierarchy window.
+
+
+
+(3) Choose the "Tank ID" and "Relationship" in the Inspector window.
+Select the top object of the tank in the Hierarchy window, and find the "ID_Settings_CS (Script)" in the Inspector window.
+
+
+At first, set the "Tank ID" differing from other tanks in the scene.
+When this value is set to zero, the tank cannot be selected in the runtime.
+(Note.)
+At least one of the tanks in the scene must be set to "1", otherwise the scene will lose the main camera in the runtime.
+
+Next, set the "Relationship" with other tanks in the scene.
+
+
+(4) Adjust the position as you will.
+Make sure that the top object of the tank is selected, and move the position and the rotation as you will.
+
+
+
+(5) Now you are ready to play.
+About the settings of AI tanks, please read 'How to use AI Tank'.
+
